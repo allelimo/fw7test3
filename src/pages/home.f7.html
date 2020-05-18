@@ -18,44 +18,163 @@
       <div class="block-title">Inline Labels</div>
       <!--list-->
       <div class="list inline-labels no-hairlines-md">
-        <ul id="listabollettini">
-        <!--imput 1 - 10.20-->
-          <li class="item-content item-input">
-            <div class="item-inner">
-              <div class="item-title item-label">10.20</div>
-              <div class="item-input-wrap">
-                <input type="text" placeholder="nr. bollettini" id="elemento1">
-                <span class="input-clear-button"></span>
-              </div>
-            </div>
-            <div class="item-input disabled">
-              <input type="text" style="text-align:center" placeholder="---" name="id010t" id="elemento2"/>
-            </div>
-          </li>
-        <!--imput 2 - 16-->
-          <li class="item-content item-input">
-            <div class="item-inner">
-              <div class="item-title item-label">16.00</div>
-              <div class="item-input-wrap">
-                <input type="text" placeholder="nr. bollettini" id="elemento3" pattern="[0-9]+">
-                <span class="input-clear-button"></span>
-              </div>
-            </div>
-            <div class="item-input disabled">
-              <input type="text" style="text-align:center" placeholder="---" name="id010t" id="elemento4"/>
-            </div>
-          </li>
-        <!-- bottoni -->
-          <li>
-            <a href="#" class="list-button" @click="CalcolaTot()" >Calcola il totale</a>
-          </li>
-          <li>
-            <a href="#" class="list-button" @click="openAlert()" >Button 1</a>
-          </li>
-          <li>
-            <a href="#" class="list-button color-red" @click="myfunction()" >Button 2</a>
-          </li>
-        </ul>
+          <ul id="listabollettini">
+              <!--input 1 - 10.20-->
+              <li class="item-content item-input">
+                  <div class="item-inner">
+                      <div class="item-title item-label">10.20</div>
+                      <div class="item-input-wrap">
+                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*">
+                          <span class="input-clear-button"></span>
+                      </div>
+                  </div>
+                  <div class="item-input disabled">
+                      <input type="text" style="text-align:center" placeholder="---" />
+                  </div>
+              </li>
+              <!--input 2 - 16-->
+              <li class="item-content item-input">
+                  <div class="item-inner">
+                      <div class="item-title item-label">16.00</div>
+                      <div class="item-input-wrap">
+                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*">
+                          <span class="input-clear-button"></span>
+                      </div>
+                  </div>
+                  <div class="item-input disabled">
+                      <input type="text" style="text-align:center" placeholder="---" />
+                  </div>
+              </li>
+              <!--input 3 - 32-->
+              <li class="item-content item-input">
+                  <div class="item-inner">
+                      <div class="item-title item-label">32.00</div>
+                      <div class="item-input-wrap">
+                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*">
+                          <span class="input-clear-button"></span>
+                      </div>
+                  </div>
+                  <div class="item-input disabled">
+                      <input type="text" style="text-align:center" placeholder="---" />
+                  </div>
+              </li>
+              <!--input 4 - 48-->
+              <li class="item-content item-input">
+                  <div class="item-inner">
+                      <div class="item-title item-label">48.00</div>
+                      <div class="item-input-wrap">
+                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*">
+                          <span class="input-clear-button"></span>
+                      </div>
+                  </div>
+                  <div class="item-input disabled">
+                      <input type="text" style="text-align:center" placeholder="---" />
+                  </div>
+              </li>
+              <!--input 5 - 64-->
+              <li class="item-content item-input">
+                  <div class="item-inner">
+                      <div class="item-title item-label">64.00</div>
+                      <div class="item-input-wrap">
+                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*">
+                          <span class="input-clear-button"></span>
+                      </div>
+                  </div>
+                  <div class="item-input disabled">
+                      <input type="text" style="text-align:center" placeholder="---" />
+                  </div>
+              </li>
+              <!--input 6 - ciclomotore-->
+              <li class="item-content item-input">
+                  <div class="item-inner">
+                      <div class="item-title item-label">ciclomotore</div>
+                      <div class="item-input-wrap">
+                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*">
+                          <span class="input-clear-button"></span>
+                      </div>
+                  </div>
+                  <div class="item-input disabled">
+                      <input type="text" style="text-align:center" placeholder="---" />
+                  </div>
+              </li>
+              <!--input 7 - targa prova-->
+              <li class="item-content item-input">
+                  <div class="item-inner">
+                      <div class="item-title item-label">prova</div>
+                      <div class="item-input-wrap">
+                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*">
+                          <span class="input-clear-button"></span>
+                      </div>
+                  </div>
+                  <div class="item-input disabled">
+                      <input type="text" style="text-align:center" placeholder="---" />
+                  </div>
+              </li>
+              <!--input 8 - motociclo-->
+              <li class="item-content item-input">
+                  <div class="item-inner">
+                      <div class="item-title item-label">motociclo</div>
+                      <div class="item-input-wrap">
+                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*">
+                          <span class="input-clear-button"></span>
+                      </div>
+                  </div>
+                  <div class="item-input disabled">
+                      <input type="text" style="text-align:center" placeholder="---" />
+                  </div>
+              </li>
+              <!--input 9 - targa ripetitrice-->
+              <li class="item-content item-input">
+                  <div class="item-inner">
+                      <div class="item-title item-label">ripetitrice</div>
+                      <div class="item-input-wrap">
+                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*">
+                          <span class="input-clear-button"></span>
+                      </div>
+                  </div>
+                  <div class="item-input disabled">
+                      <input type="text" style="text-align:center" placeholder="---" />
+                  </div>
+              </li>
+              <!--input 10 - auotveicolo-->
+              <li class="item-content item-input">
+                  <div class="item-inner">
+                      <div class="item-title item-label">autovettura</div>
+                      <div class="item-input-wrap">
+                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*">
+                          <span class="input-clear-button"></span>
+                      </div>
+                  </div>
+                  <div class="item-input disabled">
+                      <input type="text" style="text-align:center" placeholder="---" />
+                  </div>
+              </li>
+
+              <!--riga totale-->
+              <li>
+                  <div class="item-content">
+                      <div class="item-inner">
+                          <div class="item-title label">totale</div>
+                      </div>
+                      <div class="item-input disabled">
+                          <input type="text" style="text-align:center" placeholder="totale" id="idtot" />
+                      </div>
+                  </div>
+
+              </li>
+
+
+              <!-- bottoni -->
+              <li>
+                  <a href="#" class="list-button" @click="CalcolaTot()">Calcola il totale</a>
+              </li>
+              <li>
+                  <a href="#" class="list-button" @click="openAlert()">Button 1</a>
+              </li>
+              <li>
+                  <a href="#" class="list-button color-red" @click="myfunction()">Button 2</a>
+              </li>
+          </ul>
       </div>
     </div>
   </div>  
@@ -164,11 +283,11 @@ function cippalippa() {
     console.log(items);
     //var importi = [10.20, 0, 16, 0, 32, 0, 13.58, 0, 22.26, 0, 41.78, 0, 5.1, 0, 18.37, 0, 24.74, 0, 19.32, 0, 41.37, 0];
     //var dirittiPosta = 1.78;
-    var importi = [10.20, 0, 16, 0];
+    var importi = [10.20, 0, 16, 0, 32, 0, 48, 0, 64, 0, 13.58, 0, 18.37, 0, 22.26, 0, 24.74, 0, 41.78, 0 ];
     var dirittiPosta = 1.78;
 
     var totaleBollettini = 0;
-    for (var i = 0; i < 4; i = i+2) {
+    for (var i = 0; i < 20; i = i+2) {
         var a = items[i].value;
         console.log("a " + a);
         var b = importi[i];
@@ -185,7 +304,7 @@ function cippalippa() {
         totaleBollettini += d;
     }
     // scrivi i totale sull'ultima riga'
-    //document.getElementById("idtot").value = totaleBollettini.toFixed(2);
+    document.getElementById("idtot").value = totaleBollettini.toFixed(2);
 }
 
 
