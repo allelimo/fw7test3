@@ -1,0 +1,198 @@
+<template>
+  <div class="page" data-name="home">
+    <!-- Top Navbar -->
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel="left">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons if-md">menu</i>
+          </a>
+        </div>
+        <div class="title sliding">fwTest3</div>
+        </div>
+     </div>
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="block-title">Inline Labels</div>
+      <!--list-->
+      <div class="list inline-labels no-hairlines-md">
+        <ul id="listabollettini">
+        <!--imput 1 - 10.20-->
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">10.20</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="nr. bollettini" id="elemento1">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+            <div class="item-input disabled">
+              <input type="text" style="text-align:center" placeholder="---" name="id010t" id="elemento2"/>
+            </div>
+          </li>
+        <!--imput 2 - 16-->
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">16.00</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="nr. bollettini" id="elemento3" pattern="[0-9]+">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+            <div class="item-input disabled">
+              <input type="text" style="text-align:center" placeholder="---" name="id010t" id="elemento4"/>
+            </div>
+          </li>
+        <!-- bottoni -->
+          <li>
+            <a href="#" class="list-button" @click="CalcolaTot()" >Calcola il totale</a>
+          </li>
+          <li>
+            <a href="#" class="list-button" @click="openAlert()" >Button 1</a>
+          </li>
+          <li>
+            <a href="#" class="list-button color-red" @click="myfunction()" >Button 2</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>  
+
+  
+</template>
+<!-- script -->
+<script>
+  export default {
+      data: function () {
+          return {
+              title: 'your title',
+          }
+      },
+      methods: {
+          openAlert: function () {
+              //now its working
+              var self = this.$app.dialog.alert('Hello world! again');
+          },
+          myfunction: function () {
+              var app = this.$app;
+
+              var cip = 3;
+              var ciop = 4;
+              var ciup = cip + ciop;
+
+              var pip = ciup.toString();
+
+
+              app.dialog.alert("hey hey why " + pip + ciup);
+
+
+              var uella = mysum();
+              var lella = mystestfunc();
+
+
+              app.dialog.alert(uella);
+              app.dialog.alert(lella);
+
+              mystestfunction2();
+
+
+          },
+
+          CalcolaTot: function () {
+
+          //    CalcolaTotale();
+              cippalippa();
+          },
+          //mysum: function () {
+          //    var cip = 3;
+          //    var ciop = 4;
+          //    var ciup = cip + ciop;
+
+          //    return ciup;
+
+
+          //},
+      }
+  }
+
+
+
+
+  function mysum () {
+      var cip = 3;
+      var ciop = 4;
+      var ciup = cip + ciop;
+
+      return ciup;
+
+
+  }
+
+  function mystestfunc() {
+
+      var cippa = ((document.getElementById("elemento1").value));
+
+      return cippa;
+  }
+   
+  function mystestfunction2() {
+
+      var sgnappa = mystestfunc();
+      var sgnappa = sgnappa + " uella";
+
+      ((document.getElementById("elemento2").value = sgnappa + " mah boh"));
+
+      //return sgnappa;
+    } 
+
+function CalcolaTotale () {
+
+    var numinserito = ((document.getElementById("elemento3").value));
+    var numinserito = (numinserito * (10.20 + 1.78));
+    ((document.getElementById("elemento4").value = numinserito.toFixed(2)));
+  
+  
+}
+
+
+function cippalippa() {
+    var ul = document.getElementById("listabollettini");
+    console.log(ul);
+    var items = ul.getElementsByTagName("input");
+    console.log(items);
+    //var importi = [10.20, 0, 16, 0, 32, 0, 13.58, 0, 22.26, 0, 41.78, 0, 5.1, 0, 18.37, 0, 24.74, 0, 19.32, 0, 41.37, 0];
+    //var dirittiPosta = 1.78;
+    var importi = [10.20, 0, 16, 0];
+    var dirittiPosta = 1.78;
+
+    var totaleBollettini = 0;
+    for (var i = 0; i < 4; i = i+2) {
+        var a = items[i].value;
+        console.log("a " + a);
+        var b = importi[i];
+        console.log("b " + b);
+        var c = a * (b + dirittiPosta);
+        console.log("c " +c);
+        var d = parseFloat(c);
+        console.log("d" + d);
+        if (d === 0) {
+            items[i+1].value = null;
+        } else if (d !== null) {
+            items[i+1].value = d.toFixed(2);
+        }
+        totaleBollettini += d;
+    }
+    // scrivi i totale sull'ultima riga'
+    //document.getElementById("idtot").value = totaleBollettini.toFixed(2);
+}
+
+
+
+
+
+
+
+
+</script>

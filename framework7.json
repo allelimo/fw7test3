@@ -1,0 +1,26 @@
+{
+  "cwd": "C:\\Users\\allel\\dev\\fw7test3",
+  "type": [
+    "web"
+  ],
+  "name": "fwTest3",
+  "framework": "core",
+  "template": "split-view",
+  "bundler": "webpack",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false,
+  "webpack": {
+    "developmentSourceMap": true,
+    "productionSourceMap": true,
+    "hashAssets": false,
+    "preserveAssetsPaths": false,
+    "inlineAssets": true
+  }
+}
