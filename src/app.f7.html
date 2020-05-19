@@ -39,6 +39,10 @@
   </div>
 </template>
 <script>
+
+    var globalTheme = '';
+
+
   export default {
     data() {
       return {
@@ -51,7 +55,28 @@
         password: '',
 
       };
-    },
+        },
+
+        on: {
+            pageInit: function () {
+                console.log('pageInitabout');
+                globalTheme = (window.localStorage.getItem("mytheme"));
+                console.log("init page, theme get " + globalTheme);
+
+                //   helloWorld(); // this gives me error Can’t find variable: helloWorld
+                var self = this;
+                var $html = self.$('html');
+                //globalTheme = "dark";
+                $html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
+                self.$setState({ theme: globalTheme });
+
+            }
+        },
+
+
+
+
+
     methods: {
       helloWorld() {
         this.$f7.dialog.alert('Hello World!');

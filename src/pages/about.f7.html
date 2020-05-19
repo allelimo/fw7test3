@@ -14,55 +14,47 @@
     </div>
   </div>
   <div class="page-content">
-      <div class="block-title">About My App</div>
+    <div class="block-title">About My App</div>
       <div class="block block-strong">
-          <p>Fugiat perspiciatis excepturi, soluta quod non ullam deleniti. Nobis sint nemo consequuntur, fugiat. Eius perferendis animi autem incidunt vel quod tenetur nostrum, voluptate omnis quasi quidem illum consequuntur, a, quisquam.</p>
-          <p>Laudantium neque magnam vitae nemo quam commodi, in cum dolore obcaecati laborum, excepturi harum, optio qui, consequuntur? Obcaecati dolor sequi nesciunt culpa quia perspiciatis, reiciendis ex debitis, ut tenetur alias.</p>
+        <p>Fugiat perspiciatis excepturi, soluta quod non ullam deleniti. Nobis sint nemo consequuntur, fugiat. Eius perferendis animi autem incidunt vel quod tenetur nostrum, voluptate omnis quasi quidem illum consequuntur, a, quisquam.</p>
+        <p>Laudantium neque magnam vitae nemo quam commodi, in cum dolore obcaecati laborum, excepturi harum, optio qui, consequuntur? Obcaecati dolor sequi nesciunt culpa quia perspiciatis, reiciendis ex debitis, ut tenetur alias.</p>
       </div>
-      <!--<div class="block">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestiae laudantium dignissimos est nobis delectus nemo ea alias voluptatum architecto, amet similique, saepe iste consectetur in repellat ut minus quibusdam!</p>
-        <p>Molestias et distinctio porro nesciunt ratione similique, magni doloribus, rerum nobis, aliquam quae reiciendis quasi modi. Nam a recusandae, fugiat in ea voluptates fuga eius, velit corrupti reprehenderit dignissimos consequatur!</p>
-        <p>Blanditiis, cumque quo adipisci. Molestiae, dolores dolorum quos doloremque ipsa ullam eligendi commodi deserunt doloribus inventore magni? Ea mollitia veniam nostrum nihil, iusto doloribus a at! Ea molestiae ullam delectus!</p>
-    </div>-->
-      <!-- bottoni -->
-      <ul>
-          <li>
-              <a href="#" class="list-button" @click="setLayoutTheme('light')">Light</a>
-          </li>
-          <li>
-              <a href="#" class="list-button" @click="setLayoutTheme('dark')">Dark</a>
-          </li>
-      </ul>
-
-      <form class="list form-store-data" id="theme-color-form">
-          <ul>
-              <li>
-                  <div class="item-content">
-                      <div class="item-inner">
-                          <div class="item-title">Titolo</div>
-                          <div class="item-after">
-                              Dark / White
-                              <label class="toggle">
-                                  <input type="checkbox" id="option9" name="red" value="yes" @click="mynewfunction()">
-                                  <i class="toggle-icon dark-mode-btn"></i>
-                              </label>
-                          </div>
-                      </div>
-                  </div>
-              </li>
-          </ul>
-      </form>
-
+  
+    <div class="block-title">Scegli tema:</div>
+    <form class="list form-store-data" id="theme-color-form">
+        <ul>
+        <!-- Single radio item -->
+        <li>
+            <label class="item-radio item-content">
+            <!-- Radio input -->
+            <input type="radio" name="my-radio" value="radio-1" @click="setLayoutTheme('light')"/>
+            <!-- Radio icon -->
+                <i class="icon icon-radio"></i>
+                <div class="item-inner">
+                    <!-- Radio Title -->
+                    <div class="item-title">Light</div>
+                </div>
+            </label>
+            </li>
+            <!-- Another radio item -->
+        <li>
+            <label class="item-radio item-content">
+            <!-- Checked by default -->
+            <input type="radio" name="my-radio" value="radio-2"  @click="setLayoutTheme('dark')"/>
+            <i class="icon icon-radio"></i>
+                <div class="item-inner">
+                <div class="item-title">Dark</div>
+                </div>
+            </label>
+        </li>
+        </ul>
+    </form>
+    </div>
   </div>
-</div>
 </template>
 <script>
 
-    //var globalTheme = 'light';
-
-    var globalTheme = (window.localStorage.getItem("dark"));
-
-
+   var globalTheme = '';
 
 
     export default {
@@ -71,6 +63,23 @@
                 title: 'your title',
             }
         },
+
+        //on: {
+        //    pageInit: function () {
+        //        console.log('pageInitabout');
+        //        globalTheme = (window.localStorage.getItem("mytheme"));
+        //        console.log("init page, theme get " + globalTheme);
+ 
+        //        //   helloWorld(); // this gives me error Can’t find variable: helloWorld
+        //        var self = this;
+        //        var $html = self.$('html');
+        //        //globalTheme = "dark";
+        //        $html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
+        //        self.$setState({ theme: globalTheme });  
+
+        //    }
+        //},
+
         methods: {
             setLayoutTheme: function (theme) {
                 var self = this;
@@ -78,81 +87,35 @@
                 globalTheme = theme;
                 $html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
                 self.$setState({ theme: globalTheme });
+                window.localStorage.setItem("mytheme", globalTheme);
+
             },
-            mynewfunction: function () {
-                if (window.localStorage.getItem("dark") == "dark") {
+            //mynewfunction: function () {
+            //    if (window.localStorage.getItem("dark") == "dark") {
 
-                    window.localStorage.setItem("dark", "light");
-                    console.log("On dark");
+            //        window.localStorage.setItem("dark", "light");
+            //        console.log("On dark");
 
-                    var self = this;
-                    var $html = self.$('html');
-                    globalTheme = "dark";
-                    $html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
-                    self.$setState({ theme: globalTheme });
-                } else {
+            //        var self = this;
+            //        var $html = self.$('html');
+            //        globalTheme = "dark";
+            //        $html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
+            //        self.$setState({ theme: globalTheme });
+            //    } else {
  
-                    window.localStorage.setItem("dark", "dark");
-                    console.log("Off dark");
+            //        window.localStorage.setItem("dark", "dark");
+            //        console.log("Off dark");
 
-                    var self = this;
-                    var $html = self.$('html');
-                    globalTheme = "light";
-                    $html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
-                    self.$setState({ theme: globalTheme });
+            //        var self = this;
+            //        var $html = self.$('html');
+            //        globalTheme = "light";
+            //        $html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
+            //        self.$setState({ theme: globalTheme });
 
-                }
-            },
+            //    }
+            //},
 
 
         }
     }
-
-
-     //$(document).ready(function () {
-     //   //Check Dark theme and restore from localStorage
-     //   if (window.localStorage.getItem("dark") == "dark") {
-     //       var self = this;
-     //       var $html = self.$('html');
-     //       globalTheme = dark;
-     //       $html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
-     //       self.$setState({ theme: globalTheme });
-     //   } else {
-     //       var self = this;
-     //       var $html = self.$('html');
-     //       globalTheme = light;
-     //       $html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
-     //       self.$setState({ theme: globalTheme });
-     //   }
-
-        //$(".dark-mode-btn").on("click", function () {
-        //    if (window.localStorage.getItem("dark") == "light") {
-        //        window.localStorage.setItem("dark", "dark");
-        //        console.log("On dark");
-        //        //$("#app")
-        //        //    .removeClass("theme-light")
-        //        //    .addClass("theme-dark");
-        //    } else {
-        //        window.localStorage.setItem("dark", "light");
-        //        console.log("Off dark");
-        //        //$("#app")
-        //        //    .removeClass("theme-dark")
-        //        //    .addClass("theme-light");
-        //    }
- //       });
-
-
-
-
-
-
-
-
-//    });
-
-
-
-
-
-
 </script>

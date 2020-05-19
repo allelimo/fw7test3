@@ -21,45 +21,59 @@ var app = new Framework7({
   name: 'fwTest3', // App name
   theme: 'auto', // Automatic theme detection
 
-    on: {
-        pageInit: function () {
-            console.log('pageInit');
-            pippo();
+    //on: {
+    //    pageInit: function () {
+    //        console.log('pageInit');
+    //        pippo();
 
-         //   helloWorld(); // this gives me error Can’t find variable: helloWorld
+    //     //   helloWorld(); // this gives me error Can’t find variable: helloWorld
 
-        }
-    },
-
+    //    }
+    //},
+    //methods: {
+    //    setLayoutTheme2: function (theme) {
+    //        var self = this;
+    //        var $html = self.$('html');
+    //        globalTheme = theme;
+    //        $html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
+    //        self.$setState({ theme: globalTheme });
+    //    },
+    //},
   // App routes
   routes: routes,
 });
 
-function pippo() {
+//function pippo() {
 
-    var globalTheme = (window.localStorage.getItem("dark") );
+//    var globalTheme = (window.localStorage.getItem("dark") );
 
-    console.log("called pippo");
-    if (window.localStorage.getItem("dark") == "dark") {
+//    console.log("called pippo");
+//    console.log("theme stored: " + globalTheme);
 
-        window.localStorage.setItem("dark", "light");
-        console.log("off dark");
+//    if (window.localStorage.getItem("dark") == "dark") {
 
-        //var self = this;
-        //var $html = self.$('html');
-        //globalTheme = "dark";
-        //$html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
-        //self.$setState({ theme: globalTheme });
-    } else {
+//        //window.localStorage.setItem("dark", "light");
+//        console.log("dark");
 
-        window.localStorage.setItem("dark", "dark");
-        console.log("on dark");
+//       // setLayoutTheme2("dark");
 
-        //var self = this;
-        //var $html = self.$('html');
-        //globalTheme = "light";
-        //$html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
-        //self.$setState({ theme: globalTheme });
+//        //var self = this;
+//        //var $html = self.$('html');
+//        //globalTheme = "dark";
+//        //$html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
+//        //self.$setState({ theme: globalTheme });
+//    } else {
 
-    }
-}
+//        //window.localStorage.setItem("dark", "dark");
+//        console.log("light");
+
+//       // setLayoutTheme2("light");
+
+//        //var self = this;
+//        //var $html = self.$('html');
+//        //globalTheme = "light";
+//        //$html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
+//        //self.$setState({ theme: globalTheme });
+
+//    }
+//}
