@@ -61,10 +61,16 @@
         },
 
         on: {
-            pageInit: function () {
+            pageInit: function (page) {
                 console.log('pageInitabout');
+
+                   
+
                 globalTheme = (window.localStorage.getItem("mytheme"));
                 console.log("init page, theme get " + globalTheme);
+
+
+             
 
                 //   helloWorld(); // this gives me error Can’t find variable: helloWorld
                 var self = this;
@@ -73,6 +79,8 @@
                 $html.removeClass('theme-dark theme-light').addClass('theme-' + globalTheme);
                 self.$setState({ theme: globalTheme });
 
+                console.log("finsihed");
+                
             }
         },
 
@@ -98,5 +106,10 @@
         });
       }
     },
-  }
+    }
+
+
+   
+
+
 </script>
