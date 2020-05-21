@@ -1,185 +1,187 @@
 <template>
-  <div class="page" data-name="home">
-    <!-- Top Navbar -->
-    <div class="navbar">
-      <div class="navbar-bg"></div>
-      <div class="navbar-inner sliding">
-        <div class="left">
-          <a href="#" class="link icon-only panel-open" data-panel="left">
-            <i class="icon f7-icons if-not-md">menu</i>
-            <i class="icon material-icons if-md">menu</i>
-          </a>
+    <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a href="#" class="link icon-only panel-open" data-panel="left">
+                        <i class="icon f7-icons if-not-md">menu</i>
+                        <i class="icon material-icons if-md">menu</i>
+                    </a>
+                </div>
+                <div class="title sliding">Posta</div>
+            </div>
         </div>
-        <div class="title sliding">Posta</div>
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="block-title">Inline Labels changed</div>
+            <!--list-->
+            <div class="list medium-inset form-store-data inline-labels no-hairlines-md" id="home-page-form">
+                <ul id="listabollettini">
+                    <!--input 1 - 10.20-->
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">10.20</div>
+                            <div class="item-input-wrap">
+                                <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="b10">
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                        <div class="item-input disabled">
+                            <input type="text" style="text-align:center" placeholder="---" />
+                        </div>
+                    </li>
+                    <!--input 2 - 16-->
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">16.00</div>
+                            <div class="item-input-wrap">
+                                <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="b16">
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                        <div class="item-input disabled">
+                            <input type="text" style="text-align:center" placeholder="---" />
+                        </div>
+                    </li>
+                    <!--input 3 - 32-->
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">32.00</div>
+                            <div class="item-input-wrap">
+                                <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="b32">
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                        <div class="item-input disabled">
+                            <input type="text" style="text-align:center" placeholder="---" />
+                        </div>
+                    </li>
+                    <!--input 4 - 48-->
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">48.00</div>
+                            <div class="item-input-wrap">
+                                <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="b48">
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                        <div class="item-input disabled">
+                            <input type="text" style="text-align:center" placeholder="---" />
+                        </div>
+                    </li>
+                    <!--input 5 - 64-->
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">64.00</div>
+                            <div class="item-input-wrap">
+                                <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="b64">
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                        <div class="item-input disabled">
+                            <input type="text" style="text-align:center" placeholder="---" />
+                        </div>
+                    </li>
+                    <!--input 6 - ciclomotore-->
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">ciclomotore</div>
+                            <div class="item-input-wrap">
+                                <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="bciclo">
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                        <div class="item-input disabled">
+                            <input type="text" style="text-align:center" placeholder="---" />
+                        </div>
+                    </li>
+                    <!--input 7 - targa prova-->
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">prova</div>
+                            <div class="item-input-wrap">
+                                <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="bprova">
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                        <div class="item-input disabled">
+                            <input type="text" style="text-align:center" placeholder="---" />
+                        </div>
+                    </li>
+                    <!--input 8 - motociclo-->
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">motociclo</div>
+                            <div class="item-input-wrap">
+                                <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="bmoto">
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                        <div class="item-input disabled">
+                            <input type="text" style="text-align:center" placeholder="---" />
+                        </div>
+                    </li>
+                    <!--input 9 - targa ripetitrice-->
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">ripetitrice</div>
+                            <div class="item-input-wrap">
+                                <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="bripe">
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                        <div class="item-input disabled">
+                            <input type="text" style="text-align:center" placeholder="---" />
+                        </div>
+                    </li>
+                    <!--input 10 - auotveicolo-->
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">autovettura</div>
+                            <div class="item-input-wrap">
+                                <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="bauto">
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                        <div class="item-input disabled">
+                            <input type="text" style="text-align:center" placeholder="---" />
+                        </div>
+                    </li>
+
+                    <!--riga totale-->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">totale</div>
+                            </div>
+                            <div class="item-input disabled">
+                                <input type="text" style="text-align:center" placeholder="totale" id="idtot" name="btot" />
+                            </div>
+                        </div>
+
+                    </li>
+
+
+                    <!-- bottoni -->
+                    <li>
+                        <a href="#" class="list-button" @click="CalcolaTot()">Calcola il totale</a>
+                    </li>
+                    <li>
+                        <a href="#" class="list-button" @click="openAlert()">Button 1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="list-button color-red" @click="myfunction()">Button 2</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-     </div>
-    <!-- Scrollable page content-->
-    <div class="page-content">
-      <div class="block-title">Inline Labels</div>
-      <!--list-->
-      <div class="list medium-inset form-store-data inline-labels no-hairlines-md" id="home-page-form">
-          <ul id="listabollettini">
-              <!--input 1 - 10.20-->
-              <li class="item-content item-input">
-                  <div class="item-inner">
-                      <div class="item-title item-label">10.20</div>
-                      <div class="item-input-wrap">
-                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="b10">
-                          <span class="input-clear-button"></span>
-                      </div>
-                  </div>
-                  <div class="item-input disabled">
-                      <input type="text" style="text-align:center" placeholder="---" />
-                  </div>
-              </li>
-              <!--input 2 - 16-->
-              <li class="item-content item-input">
-                  <div class="item-inner">
-                      <div class="item-title item-label">16.00</div>
-                      <div class="item-input-wrap">
-                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="b16">
-                          <span class="input-clear-button"></span>
-                      </div>
-                  </div>
-                  <div class="item-input disabled">
-                      <input type="text" style="text-align:center" placeholder="---" />
-                  </div>
-              </li>
-              <!--input 3 - 32-->
-              <li class="item-content item-input">
-                  <div class="item-inner">
-                      <div class="item-title item-label">32.00</div>
-                      <div class="item-input-wrap">
-                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="b32">
-                          <span class="input-clear-button"></span>
-                      </div>
-                  </div>
-                  <div class="item-input disabled">
-                      <input type="text" style="text-align:center" placeholder="---" />
-                  </div>
-              </li>
-              <!--input 4 - 48-->
-              <li class="item-content item-input">
-                  <div class="item-inner">
-                      <div class="item-title item-label">48.00</div>
-                      <div class="item-input-wrap">
-                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="b48">
-                          <span class="input-clear-button"></span>
-                      </div>
-                  </div>
-                  <div class="item-input disabled">
-                      <input type="text" style="text-align:center" placeholder="---" />
-                  </div>
-              </li>
-              <!--input 5 - 64-->
-              <li class="item-content item-input">
-                  <div class="item-inner">
-                      <div class="item-title item-label">64.00</div>
-                      <div class="item-input-wrap">
-                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="b64">
-                          <span class="input-clear-button"></span>
-                      </div>
-                  </div>
-                  <div class="item-input disabled">
-                      <input type="text" style="text-align:center" placeholder="---" />
-                  </div>
-              </li>
-              <!--input 6 - ciclomotore-->
-              <li class="item-content item-input">
-                  <div class="item-inner">
-                      <div class="item-title item-label">ciclomotore</div>
-                      <div class="item-input-wrap">
-                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="bciclo">
-                          <span class="input-clear-button"></span>
-                      </div>
-                  </div>
-                  <div class="item-input disabled">
-                      <input type="text" style="text-align:center" placeholder="---" />
-                  </div>
-              </li>
-              <!--input 7 - targa prova-->
-              <li class="item-content item-input">
-                  <div class="item-inner">
-                      <div class="item-title item-label">prova</div>
-                      <div class="item-input-wrap">
-                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="bprova">
-                          <span class="input-clear-button"></span>
-                      </div>
-                  </div>
-                  <div class="item-input disabled">
-                      <input type="text" style="text-align:center" placeholder="---" />
-                  </div>
-              </li>
-              <!--input 8 - motociclo-->
-              <li class="item-content item-input">
-                  <div class="item-inner">
-                      <div class="item-title item-label">motociclo</div>
-                      <div class="item-input-wrap">
-                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="bmoto">
-                          <span class="input-clear-button"></span>
-                      </div>
-                  </div>
-                  <div class="item-input disabled">
-                      <input type="text" style="text-align:center" placeholder="---" />
-                  </div>
-              </li>
-              <!--input 9 - targa ripetitrice-->
-              <li class="item-content item-input">
-                  <div class="item-inner">
-                      <div class="item-title item-label">ripetitrice</div>
-                      <div class="item-input-wrap">
-                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="bripe">
-                          <span class="input-clear-button"></span>
-                      </div>
-                  </div>
-                  <div class="item-input disabled">
-                      <input type="text" style="text-align:center" placeholder="---" />
-                  </div>
-              </li>
-              <!--input 10 - auotveicolo-->
-              <li class="item-content item-input">
-                  <div class="item-inner">
-                      <div class="item-title item-label">autovettura</div>
-                      <div class="item-input-wrap">
-                          <input type="text" placeholder="nr. bollettini" pattern="[0-9]*" name="bauto">
-                          <span class="input-clear-button"></span>
-                      </div>
-                  </div>
-                  <div class="item-input disabled">
-                      <input type="text" style="text-align:center" placeholder="---" />
-                  </div>
-              </li>
-
-              <!--riga totale-->
-              <li>
-                  <div class="item-content">
-                      <div class="item-inner">
-                          <div class="item-title label">totale</div>
-                      </div>
-                      <div class="item-input disabled">
-                          <input type="text" style="text-align:center" placeholder="totale" id="idtot" name="btot"/>
-                      </div>
-                  </div>
-
-              </li>
-
-
-              <!-- bottoni -->
-              <li>
-                  <a href="#" class="list-button" @click="CalcolaTot()">Calcola il totale</a>
-              </li>
-              <li>
-                  <a href="#" class="list-button" @click="openAlert()">Button 1</a>
-              </li>
-              <li>
-                  <a href="#" class="list-button color-red" @click="myfunction()">Button 2</a>
-              </li>
-          </ul>
-      </div>
     </div>
-  </div>  
+
 
   
+
 </template>
 <!-- script -->
 <script>
@@ -190,7 +192,21 @@
           }
         },
 
- 
+        on: {
+            pageAfterIn: function (page) {
+                console.log('pageInitabout new ue ue');
+                cippalippa();
+
+
+
+               
+
+            }
+        },
+
+
+
+
            methods: {
           openAlert: function () {
               //now its working
