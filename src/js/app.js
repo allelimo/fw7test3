@@ -39,6 +39,7 @@ var app = new Framework7({
     //        self.$setState({ theme: globalTheme });
     //    },
     //},
+
   // App routes
   routes: routes,
 });
